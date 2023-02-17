@@ -1,0 +1,6 @@
+site_name: Test Website
+site_description: Test
+theme:
+  name: gitbook
+nav:
+  - Home: "index.md"
