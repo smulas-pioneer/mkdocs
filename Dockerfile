@@ -3,9 +3,10 @@ FROM python
 # WORKDIR /Nethereum.Docs/
 RUN pip install mkdocs
 RUN pip install mkdocs-bootstrap386
-RUN pip install -U mkdocs-simple-blog
+RUN pip install mkdocs-simple-blog
 RUN pip install mkdocs-gitbook
 RUN pip install mkdocs-terminal
+RUN pip install mkdocs-material
 
 RUN mkdir /src
 

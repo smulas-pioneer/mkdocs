@@ -20,7 +20,7 @@ help: ## Display this help message
 ## Build Commands
 ##
 
-serve: # serve test website
+serve: ## serve test website
 	@echo running on http://localhost:8082
 	docker run -it --rm \
 	-p 8082:8000 \
@@ -30,5 +30,8 @@ serve: # serve test website
 	-u $(id -u ${USER}):$(id -g ${USER}) \
 	smulas/mkdocs mkdocs serve -a 0.0.0.0:8000
 
-build: # build docker image
-	docker build -t smulas/mkdocs .          
+build: ## build docker image
+	docker build -t smulas/mkdocs .         
+
+deploy: ## deploy docker image to dockerhub
+	docker push smulas/mkdocs  
